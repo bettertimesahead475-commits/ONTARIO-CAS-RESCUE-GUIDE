@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Source_Serif_4 } from "next/font/google"
 import "./globals.css"
 
@@ -18,8 +18,10 @@ export const metadata: Metadata = {
     "Educational platform for Ontario parents involved with the Child, Youth and Family Services Act (CYFSA) and Family Court processes. Not legal advice.",
 }
 
-export const viewport = {
+export const viewport: Viewport = {
   themeColor: "#1a365d",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -28,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )

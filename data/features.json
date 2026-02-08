@@ -1,0 +1,74 @@
+[
+  {
+    "id": "cyfsa-guide",
+    "icon": "Scale",
+    "title": "CYFSA Guide",
+    "description": "Comprehensive education on Ontario's Child, Youth and Family Services Act. Learn about emergency removal processes, grounds for protection, parent and child rights, and procedural timelines.",
+    "highlights": [
+      "Emergency removal process (first 5 days)",
+      "Parent rights and child rights",
+      "Evidence vs hearsay vs opinion",
+      "Watch-for checklist for documents"
+    ]
+  },
+  {
+    "id": "family-court",
+    "icon": "FileText",
+    "title": "Family Court Process",
+    "description": "Understand Ontario Family Court proceedings with clear explanations of motions, case conferences, affidavits, and the court document lifecycle.",
+    "highlights": [
+      "Types of family court proceedings",
+      "Temporary vs final orders",
+      "5-day rule explained",
+      "Links to official court forms"
+    ]
+  },
+  {
+    "id": "child-impact",
+    "icon": "Brain",
+    "title": "Child Development Impact",
+    "description": "Evidence-based information on how removal affects children, including attachment disruption, trauma research, and reunification outcomes.",
+    "highlights": [
+      "Short and long-term impacts",
+      "Attachment research",
+      "Reunification outcomes",
+      "Peer-reviewed sources only"
+    ]
+  },
+  {
+    "id": "analyzer",
+    "icon": "FileSearch",
+    "title": "Document Analyzer",
+    "description": "Upload documents to identify missing legal thresholds, unsupported claims, hearsay, and procedural issues. Educational analysis only.",
+    "highlights": [
+      "Flags missing thresholds",
+      "Identifies hearsay vs fact",
+      "Procedural violation alerts",
+      "Source-linked explanations"
+    ]
+  },
+  {
+    "id": "templates",
+    "icon": "ClipboardList",
+    "title": "Document Templates",
+    "description": "Educational draft builders for organizing your case, including timeline builders, evidence logs, and preparation worksheets.",
+    "highlights": [
+      "Case timeline builder",
+      "Evidence log template",
+      "Issue summary sheet",
+      "Export to PDF"
+    ]
+  },
+  {
+    "id": "voice",
+    "icon": "Mic",
+    "title": "Voice Assistant",
+    "description": "Accessibility features including text-to-speech, speech-to-text, and read-aloud mode for all educational content.",
+    "highlights": [
+      "Text-to-speech narration",
+      "Voice commands",
+      "Read-aloud mode",
+      "Section summaries"
+    ]
+  }
+]

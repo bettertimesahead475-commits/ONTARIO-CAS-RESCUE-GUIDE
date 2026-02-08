@@ -1,12 +1,10 @@
 import { AlertTriangle, ExternalLink } from "lucide-react"
+import sourcesData from "@/data/sources.json"
+import { DISCLAIMER_TEXT } from "@/lib/constants"
+import { getSourceAriaLabel } from "@/lib/helpers"
+import type { Source } from "@/lib/types"
 
-const sources = [
-  { name: "Ontario e-Laws", url: "https://www.ontario.ca/laws" },
-  { name: "CanLII", url: "https://www.canlii.org" },
-  { name: "Government of Ontario", url: "https://www.ontario.ca" },
-  { name: "Department of Justice Canada", url: "https://www.justice.gc.ca" },
-  { name: "Ontario Court of Justice", url: "https://www.ontariocourts.ca/ocj" },
-]
+const sources: Source[] = sourcesData.primarySources
 
 export function Disclaimer() {
   return (
@@ -19,18 +17,13 @@ export function Disclaimer() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-foreground">
-                Important Legal Disclaimer
+                {DISCLAIMER_TEXT.title}
               </h3>
               <p className="mt-2 leading-relaxed text-muted-foreground">
-                This platform is for <strong>educational purposes only</strong> and 
-                does not constitute legal advice. All information is sourced from 
-                verified Ontario and Canadian primary sources. If information cannot 
-                be verified from primary sources, we clearly indicate this.
+                {DISCLAIMER_TEXT.body}
               </p>
               <p className="mt-3 text-sm text-muted-foreground">
-                <strong>Ontario jurisdiction only.</strong> This platform does not 
-                provide information for other provinces or countries. Always consult 
-                with a qualified legal professional for advice specific to your situation.
+                <strong>Ontario jurisdiction only.</strong> {DISCLAIMER_TEXT.jurisdiction}
               </p>
             </div>
           </div>
@@ -46,6 +39,7 @@ export function Disclaimer() {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={getSourceAriaLabel(source.name)}
                   className="inline-flex items-center gap-1 rounded-full bg-background px-3 py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {source.name}

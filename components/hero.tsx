@@ -1,5 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Shield, BookOpen } from "lucide-react"
+import siteData from "@/data/site.json"
+import type { Stat } from "@/lib/types"
+
+const stats: Stat[] = siteData.stats
 
 export function Hero() {
   return (
@@ -36,9 +40,9 @@ export function Hero() {
         </div>
 
         <div className="mt-20 grid gap-6 sm:grid-cols-3">
-          <StatCard number="100+" label="Primary Sources" />
-          <StatCard number="6" label="Educational Sections" />
-          <StatCard number="Ontario" label="Jurisdiction Focus" />
+          {stats.map((stat) => (
+            <StatCard key={stat.label} number={stat.number} label={stat.label} />
+          ))}
         </div>
       </div>
     </section>

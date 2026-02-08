@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Inter, Source_Serif_4 } from "next/font/google"
+import siteData from "@/data/site.json"
 import "./globals.css"
 
 const inter = Inter({
@@ -13,9 +14,8 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: "Ontario CYFSA Guide | Parent Education Platform",
-  description:
-    "Educational platform for Ontario parents involved with the Child, Youth and Family Services Act (CYFSA) and Family Court processes. Not legal advice.",
+  title: `${siteData.name} | Parent Education Platform`,
+  description: siteData.description,
 }
 
 export const viewport: Viewport = {

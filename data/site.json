@@ -1,0 +1,18 @@
+{
+  "name": "Ontario CYFSA Guide",
+  "description": "Educational platform for Ontario parents involved with the Child, Youth and Family Services Act (CYFSA) and Family Court processes. Not legal advice.",
+  "jurisdiction": "Ontario, Canada",
+  "contact": {
+    "email": "mr.pelkie@gmail.com"
+  },
+  "payment": {
+    "interac": "mr.pelkie@gmail.com",
+    "stripe": "Coming soon",
+    "paypal": "Coming soon"
+  },
+  "stats": [
+    { "number": "100+", "label": "Primary Sources" },
+    { "number": "6", "label": "Educational Sections" },
+    { "number": "Ontario", "label": "Jurisdiction Focus" }
+  ]
+}

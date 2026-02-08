@@ -1,0 +1,16 @@
+{
+  "primarySources": [
+    { "name": "Ontario e-Laws", "url": "https://www.ontario.ca/laws" },
+    { "name": "CanLII", "url": "https://www.canlii.org" },
+    { "name": "Government of Ontario", "url": "https://www.ontario.ca" },
+    { "name": "Department of Justice Canada", "url": "https://www.justice.gc.ca" },
+    { "name": "Ontario Court of Justice", "url": "https://www.ontariocourts.ca/ocj" },
+    { "name": "Superior Court of Justice", "url": "https://www.ontariocourts.ca/scj" },
+    { "name": "Supreme Court of Canada", "url": "https://www.scc-csc.ca" }
+  ],
+  "footerSources": [
+    { "name": "Ontario e-Laws", "href": "https://www.ontario.ca/laws" },
+    { "name": "CanLII", "href": "https://www.canlii.org" },
+    { "name": "Ontario Courts", "href": "https://www.ontariocourts.ca" }
+  ]
+}

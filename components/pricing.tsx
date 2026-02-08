@@ -1,56 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 import { cn } from "@/lib/utils"
+import pricingData from "@/data/pricing.json"
+import siteData from "@/data/site.json"
+import type { PricingTier } from "@/lib/types"
 
-const tiers = [
-  {
-    name: "Basic",
-    price: "$19",
-    period: "/month",
-    description: "Essential CYFSA education for Ontario parents.",
-    features: [
-      "Full CYFSA Guide access",
-      "Family Court Process section",
-      "Child Development Impact section",
-      "Primary source links",
-      "Email support",
-    ],
-    highlighted: false,
-    cta: "Get Started",
-  },
-  {
-    name: "Pro",
-    price: "$39",
-    period: "/month",
-    description: "Everything in Basic plus document analysis tools.",
-    features: [
-      "Everything in Basic",
-      "Document Analyzer tool",
-      "PDF, DOCX, TXT support",
-      "Image OCR analysis",
-      "Red flag identification",
-      "Priority email support",
-    ],
-    highlighted: true,
-    cta: "Start Free Trial",
-  },
-  {
-    name: "Premium",
-    price: "$59",
-    period: "/month",
-    description: "Complete access with templates and voice assistant.",
-    features: [
-      "Everything in Pro",
-      "Document template builders",
-      "Case timeline builder",
-      "Voice assistant access",
-      "PDF export",
-      "Phone support",
-    ],
-    highlighted: false,
-    cta: "Get Started",
-  },
-]
+const tiers: PricingTier[] = pricingData
 
 export function Pricing() {
   return (
@@ -119,7 +74,7 @@ export function Pricing() {
         </div>
 
         <p className="mt-8 text-center text-sm text-muted-foreground">
-          Payment via Interac e-Transfer. Stripe and PayPal coming soon.
+          Payment via Interac e-Transfer ({siteData.payment.interac}). Stripe and PayPal coming soon.
         </p>
       </div>
     </section>

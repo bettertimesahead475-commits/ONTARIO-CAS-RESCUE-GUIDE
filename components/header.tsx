@@ -4,13 +4,11 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, Scale, X } from "lucide-react"
+import navigationData from "@/data/navigation.json"
+import siteData from "@/data/site.json"
+import type { NavItem } from "@/lib/types"
 
-const navigation = [
-  { name: "CYFSA Guide", href: "#cyfsa-guide" },
-  { name: "Family Court", href: "#family-court" },
-  { name: "Document Analyzer", href: "#analyzer" },
-  { name: "Pricing", href: "#pricing" },
-]
+const navigation: NavItem[] = navigationData.mainNav
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -28,7 +26,7 @@ export function Header() {
             <Scale className="h-5 w-5 text-primary-foreground" />
           </div>
           <span className="text-lg font-semibold text-foreground">
-            Ontario CYFSA Guide
+            {siteData.name}
           </span>
         </Link>
 

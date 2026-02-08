@@ -1,24 +1,16 @@
 import Link from "next/link"
 import { Scale } from "lucide-react"
+import navigationData from "@/data/navigation.json"
+import sourcesData from "@/data/sources.json"
+import siteData from "@/data/site.json"
+import { getCopyrightYear, isExternalLink } from "@/lib/helpers"
+import type { NavigationData, SourcesData } from "@/lib/types"
 
+const navData: NavigationData = navigationData
 const footerLinks = {
-  resources: [
-    { name: "CYFSA Guide", href: "#cyfsa-guide" },
-    { name: "Family Court Process", href: "#family-court" },
-    { name: "Document Analyzer", href: "#analyzer" },
-    { name: "Templates", href: "#templates" },
-  ],
-  legal: [
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Disclaimer", href: "#disclaimer" },
-    { name: "Refund Policy", href: "/refunds" },
-  ],
-  sources: [
-    { name: "Ontario e-Laws", href: "https://www.ontario.ca/laws" },
-    { name: "CanLII", href: "https://www.canlii.org" },
-    { name: "Ontario Courts", href: "https://www.ontariocourts.ca" },
-  ],
+  resources: navData.footerLinks.resources,
+  legal: navData.footerLinks.legal,
+  sources: (sourcesData as SourcesData).footerSources,
 }
 
 export function Footer() {
@@ -32,7 +24,7 @@ export function Footer() {
                 <Scale className="h-5 w-5 text-primary-foreground" />
               </div>
               <span className="text-lg font-semibold text-foreground">
-                Ontario CYFSA Guide
+                {siteData.name}
               </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -96,7 +88,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-center text-sm text-muted-foreground">
-            {new Date().getFullYear()} Ontario CYFSA Guide. Educational purposes only. 
+            {getCopyrightYear()} {siteData.name}. Educational purposes only. 
             Not legal advice.
           </p>
         </div>

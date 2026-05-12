@@ -110,7 +110,7 @@ These are educational drafts and not court-ready forms.
 | Premium | Monthly  | + Templates + Voice Assistant |
 
 Payment:
-- Interac e-Transfer: mr.pelkie@gmail.com  
+- Interac e-Transfer: ontarioparentassist@gmail.com 
 - Stripe: Coming soon  
 - PayPal: Coming soon  
 
